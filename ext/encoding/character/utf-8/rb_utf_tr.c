@@ -128,6 +128,7 @@ again:
                                 if (t != NULL)
                                         memcpy(t + len, prev, s - prev);
                                 len += s - prev;
+                                modified = false;
                         }
 
                 }
@@ -149,6 +150,7 @@ again:
                                 if (t != NULL)
                                         memcpy(t + len, prev, s - prev);
                                 len += s - prev;
+                                modified = false;
                         }
                 }
         }
