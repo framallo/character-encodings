@@ -1,3 +1,5 @@
+require 'rake'
+
 Gem::Specification.new do |s|
   s.name = 'character-encodings'
   s.version = '0.4.1'
@@ -9,7 +11,11 @@ Gem::Specification.new do |s|
   s.author = 'Nikolai Weibull'
   s.email = 'now@bitwi.se'
   s.homepage = 'http://git.bitwi.se/?p=ruby-character-encodings.git;a=summary'
-  s.files = PackageFiles
+  s.files = %w(README Rakefile) +
+  Dir.glob("{lib,specifications}/**/*") +
+  Dir.glob("ext/**/{*.{c,h,rb},depend}") +
+  Dir.glob("tests/*.rb")
+ 
   s.require_path = "lib"
   s.extensions = FileList["ext/**/extconf.rb"].to_a
 end
