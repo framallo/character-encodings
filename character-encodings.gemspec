@@ -1,5 +1,3 @@
-#require 'rake'
-
 Gem::Specification.new do |s|
   s.name = 'character-encodings'
   s.version = '0.4.1'
@@ -17,6 +15,6 @@ Gem::Specification.new do |s|
   Dir.glob("tests/*.rb")
  
   s.require_path = "lib"
-  s.extensions = FileList["ext/**/extconf.rb"].to_a
+  s.extensions = ["ext/encoding/character/utf-8/extconf.rb"]
   s.add_runtime_dependency 'rake'
 end
