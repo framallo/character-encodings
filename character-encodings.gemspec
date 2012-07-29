@@ -1,4 +1,4 @@
-# require 'rake'
+#require 'rake'
 
 Gem::Specification.new do |s|
   s.name = 'character-encodings'
@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
  
   s.require_path = "lib"
   s.extensions = FileList["ext/**/extconf.rb"].to_a
+  s.add_runtime_dependency 'rake'
 end
